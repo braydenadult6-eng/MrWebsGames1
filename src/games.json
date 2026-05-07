@@ -1,37 +1,142 @@
 [
   {
-    "id": "2048",
-    "title": "2048",
-    "description": "Join the numbers and get to the 2048 tile!",
-    "iframeUrl": "https://play2048.co/",
-    "thumbnail": "https://images.unsplash.com/photo-1614332287897-cdc485fa562d?q=80&w=1470&auto=format&fit=crop"
+    "id": "basket-random",
+    "title": "Basket Random",
+    "description": "A chaotic two-player basketball game with physics-based movement. Score points in bizarre and unpredictable ways!",
+    "iframeUrl": "https://basketrandom.github.io/",
+    "thumbnail": "https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=1470&auto=format&fit=crop"
   },
   {
-    "id": "tetris",
-    "title": "Tetris",
-    "description": "The classic block-stacking puzzle game.",
-    "iframeUrl": "https://tetris.com/play-tetris",
-    "thumbnail": "https://images.unsplash.com/photo-1574672280600-4accfa5b6f98?q=80&w=1470&auto=format&fit=crop"
+    "id": "burrito-bison",
+    "title": "Burrito Bison",
+    "description": "Launch Burrito Bison as far as you can, squashing gummies and upgrading your gear to reach new heights.",
+    "iframeUrl": "https://burritobison-online.github.io/file/",
+    "thumbnail": "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=1470&auto=format&fit=crop"
   },
   {
-    "id": "snake",
-    "title": "Snake",
-    "description": "A classic arcade game where you grow longer by eating.",
-    "iframeUrl": "https://www.google.com/logos/2010/pacman10-i.html",
+    "id": "rob-brainrot-2",
+    "title": "Rob Brainrot 2",
+    "description": "Dive into the chaos of Rob Brainrot 2. A peculiar and fast-paced experience that defies convention.",
+    "iframeUrl": "https://gamea.azgame.io/rob-brainrot-2/",
+    "thumbnail": "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=1470&auto=format&fit=crop"
+  },
+  {
+    "id": "soccer-random",
+    "title": "Soccer Random",
+    "description": "A hilarious one-button soccer game where physics decide the outcome. Experience the chaos of random fields and players!",
+    "iframeUrl": "https://unblocked-games-786.github.io/Soccer-Random/",
+    "thumbnail": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1470&auto=format&fit=crop"
+  },
+  {
+    "id": "volley-random",
+    "title": "Volley Random",
+    "description": "Fun, physics-based volleyball chaos. Master the single-button controls to spike the ball and outwit your opponent!",
+    "iframeUrl": "https://unblocked-games-786.github.io/Volley-Random/",
+    "thumbnail": "https://images.unsplash.com/photo-1592656631147-f1aa211995a6?q=80&w=1470&auto=format&fit=crop"
+  },
+  {
+    "id": "a-small-world-cup",
+    "title": "A Small World Cup",
+    "description": "Explosive 2D soccer action! Slam the ball into the net with physics-driven puppets in this fast-paced tournament.",
+    "iframeUrl": "https://mrsmiths.mathprep.cmstarhely.hu/api/gc/gn-html/755.html",
+    "thumbnail": "https://images.unsplash.com/photo-1551952237-954a0e68786c?q=80&w=1470&auto=format&fit=crop"
+  },
+  {
+    "id": "escape-road",
+    "title": "Escape Road",
+    "description": "A high-stakes driving game where you must navigate through traffic and obstacles to reach safety. Precision and speed are key!",
+    "iframeUrl": "https://jasongamesdev.github.io/escape-road/",
+    "thumbnail": "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=1470&auto=format&fit=crop"
+  },
+  {
+    "id": "ragdoll-archers",
+    "title": "Ragdoll Archers",
+    "description": "A physics-based archery game where you control a ragdoll archer. Aim carefully and use gravity to your advantage to defeat your opponents!",
+    "iframeUrl": "https://jasongamesdev.github.io/ragdoll-archers/",
+    "thumbnail": "https://images.unsplash.com/photo-1511082728917-cf57f7a7bc47?q=80&w=1470&auto=format&fit=crop"
+  },
+  {
+    "id": "ragdoll-hit",
+    "title": "Ragdoll Hit",
+    "description": "Engage in chaotic physics-based combat. Control your ragdoll fighter to strike opponents and navigate through various challenging levels!",
+    "iframeUrl": "https://jasongamesdev.github.io/ragdoll-hit/",
+    "thumbnail": "https://images.unsplash.com/photo-1511110114770-b7167ff34a7e?q=80&w=1470&auto=format&fit=crop"
+  },
+  {
+    "id": "funny-shooter-2",
+    "title": "Funny Shooter 2",
+    "description": "An absurdly fun first-person shooter where you battle waves of wacky enemies with an arsenal of unique weapons. Stay sharp and keep firing!",
+    "iframeUrl": "https://snakeio-unblocked.github.io/embed/funny-shooter-2.html",
     "thumbnail": "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=1470&auto=format&fit=crop"
   },
   {
-    "id": "tunnel-rush",
-    "title": "Tunnel Rush",
-    "description": "Fast-paced racing through colorful tunnels.",
-    "iframeUrl": "https://yandex.com/games/app/99166",
-    "thumbnail": "https://images.unsplash.com/photo-1550745165-9bc0b252723f?q=80&w=1470&auto=format&fit=crop"
+    "id": "five-nights-at-epsteins",
+    "title": "Five Nights at Epstein's",
+    "description": "A survival horror parody where you must monitor cameras and survive the night. Keep a close eye on the feed to stay safe.",
+    "iframeUrl": "https://freedomgamingzone.github.io/five-nights-at-epsteins/",
+    "thumbnail": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1470&auto=format&fit=crop"
   },
   {
-    "id": "crossy-road",
-    "title": "Crossy Road",
-    "description": "Why did the chicken cross the road? Just to get to the other side!",
-    "iframeUrl": "https://yandex.com/games/app/161474",
-    "thumbnail": "https://images.unsplash.com/photo-1551103782-8ab07afd45c1?q=80&w=1470&auto=format&fit=crop"
+    "id": "epstein-clicker",
+    "title": "Epstein Clicker",
+    "description": "An addictive clicker game where you build your empire one tap at a time. Unlock upgrades and increase your influence.",
+    "iframeUrl": "https://epsteinclicker.github.io/",
+    "thumbnail": "https://images.unsplash.com/photo-1554224155-1696413565d3?q=80&w=1470&auto=format&fit=crop"
+  },
+  {
+    "id": "fnaf-hd",
+    "title": "Five Nights at Freddy's HD",
+    "description": "The cult classic horror game in high definition. Survive five nights at Freddy Fazbear's Pizza while monitoring security cameras and managing power.",
+    "iframeUrl": "https://irv77.github.io/hd_fnaf/1/",
+    "thumbnail": "https://images.unsplash.com/photo-1593305841991-05c297ba4575?q=80&w=1470&auto=format&fit=crop"
+  },
+  {
+    "id": "fnaf-2-hd",
+    "title": "Five Nights at Freddy's 2 HD",
+    "description": "The sequel to the hit horror game. With new animatronics and no doors to protect you, survival is more difficult than ever.",
+    "iframeUrl": "https://irv77.github.io/hd_fnaf/2/",
+    "thumbnail": "https://images.unsplash.com/photo-1626544823105-ff9697390582?q=80&w=1470&auto=format&fit=crop"
+  },
+  {
+    "id": "fnaf-3-hd",
+    "title": "Five Nights at Freddy's 3 HD",
+    "description": "Thirty years after Freddy Fazbear's Pizza closed, a new attraction opens: Fazbear's Fright. Only one animatronic remains, and he's coming for you.",
+    "iframeUrl": "https://irv77.github.io/hd_fnaf/3/",
+    "thumbnail": "https://images.unsplash.com/photo-1621682372775-533449e550ed?q=80&w=1471&auto=format&fit=crop"
+  },
+  {
+    "id": "fnaf-4-hd",
+    "title": "Five Nights at Freddy's 4 HD",
+    "description": "This time, the terror has followed you home. Survive against the nightmare animatronics lurking in your own bedroom.",
+    "iframeUrl": "https://irv77.github.io/hd_fnaf/4/",
+    "thumbnail": "https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=1470&auto=format&fit=crop"
+  },
+  {
+    "id": "growden-io",
+    "title": "Growden.io",
+    "description": "A multiplayer survival and growth game. Collect resources, grow your character, and dominate the arena in this fast-paced .io experience.",
+    "iframeUrl": "https://growden.io/",
+    "thumbnail": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1470&auto=format&fit=crop"
+  },
+  {
+    "id": "retro-bowl",
+    "title": "Retro Bowl",
+    "description": "The perfect game for the armchair quarterback. Manage your team, call the plays, and lead your franchise to glory in this retro-styled American football game.",
+    "iframeUrl": "https://spaedu23.github.io/g5/class-400",
+    "thumbnail": "https://images.unsplash.com/photo-1566577739112-5180d4bf9390?q=80&w=1471&auto=format&fit=crop"
+  },
+  {
+    "id": "soccer-skills-euro-cup",
+    "title": "Soccer Skills Euro Cup",
+    "description": "Lead your favorite European team to victory in this fast-paced soccer game. Master crossovers, headers, and powerful shots to win the tournament!",
+    "iframeUrl": "https://mrsmiths.mathprep.cmstarhely.hu/api/gc/gn-html/581.html",
+    "thumbnail": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1470&auto=format&fit=crop"
+  },
+  {
+    "id": "blade-ball",
+    "title": "Blade Ball",
+    "description": "A high-octane battle game where you must deflect a homing ball using various abilities. Master your timing and strategy to be the last one standing!",
+    "iframeUrl": "https://mrsmiths.mathprep.cmstarhely.hu/api/gc/gn-html/167.html",
+    "thumbnail": "https://images.unsplash.com/photo-1614028674026-a65e31bfd27c?q=80&w=1471&auto=format&fit=crop"
   }
 ]

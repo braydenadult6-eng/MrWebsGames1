@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nova Games | Unblocked Vault</title>
+    <title>MrWebsGames | Unblocked Vault</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -56,6 +56,25 @@
         border-color: rgba(79, 70, 229, 0.3);
       }
 
+      /* Cloak Overlay */
+      #cloak-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        background-color: white;
+        background-image: url('https://raw.githubusercontent.com/3kh0/3kh0-assets/main/canvas.png');
+        background-size: cover;
+        background-position: center;
+      }
+      body.cloaked #cloak-overlay {
+        display: flex;
+        flex-direction: column;
+      }
+      body.cloaked #app, body.cloaked #game-modal {
+        display: none !important;
+      }
+
       /* Hide scrollbar for Chrome, Safari and Opera */
       .no-scrollbar::-webkit-scrollbar {
         display: none;
@@ -68,6 +87,9 @@
     </style>
   </head>
   <body class="min-h-screen flex flex-col p-4 md:p-6 gap-6">
+    <div id="cloak-overlay" class="cursor-pointer">
+      <div class="h-full w-full pointer-events-none"></div>
+    </div>
     <div id="app" class="flex flex-col gap-6 flex-1">
       <!-- Content will be injected here by main.js -->
     </div>

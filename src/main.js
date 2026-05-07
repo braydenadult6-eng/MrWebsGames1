@@ -9,9 +9,39 @@ const closeModalBtn = document.getElementById('close-modal');
 
 let allGames = [];
 let searchQuery = '';
+let isCloaked = localStorage.getItem('isCloaked') === 'true';
+
+// Cloak Metadata
+const ORIGINAL_TITLE = document.title;
+const ORIGINAL_FAVICON = "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=1470&auto=format&fit=crop"; // Placeholder for original
+const CLOAK_TITLE = "Dashboard";
+const CLOAK_FAVICON = "https://du11hjcvx0wq0.cloudfront.net/images/favicon.ico";
+
+function updateCloak() {
+  if (isCloaked) {
+    document.title = CLOAK_TITLE;
+    setFavicon(CLOAK_FAVICON);
+    document.body.classList.add('cloaked');
+  } else {
+    document.title = ORIGINAL_TITLE;
+    setFavicon(ORIGINAL_FAVICON);
+    document.body.classList.remove('cloaked');
+  }
+}
+
+function setFavicon(url) {
+  let link = document.querySelector("link[rel~='icon']");
+  if (!link) {
+    link = document.createElement('link');
+    link.rel = 'icon';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  }
+  link.href = url;
+}
 
 // Load Games Data
 async function init() {
+  updateCloak();
   try {
     const response = await fetch('./src/games.json');
     allGames = await response.json();
@@ -27,17 +57,21 @@ function renderApp() {
     game.description.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  const featuredGame = allGames[0];
-  const trendingGames = allGames.slice(1, 4);
+  const hasGames = allGames.length > 0;
+  const featuredGame = hasGames ? allGames[0] : null;
+  const trendingGames = hasGames ? allGames.slice(1, 4) : [];
 
   appContainer.innerHTML = `
     <!-- Header -->
     <header class="flex items-center justify-between bg-slate-900/50 border border-slate-800 rounded-2xl p-4 h-16 backdrop-blur-xl">
       <div class="flex items-center gap-3">
+        <button id="cloak-btn" class="p-2 bg-slate-800 hover:bg-slate-700 rounded-lg text-slate-400 mr-2 border border-slate-700" title="Cloak Site">
+          <i data-lucide="eye-off" class="w-4 h-4"></i>
+        </button>
         <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center shadow-[0_0_15px_rgba(79,70,229,0.4)]">
           <i data-lucide="gamepad-2" class="w-5 h-5 text-white"></i>
         </div>
-        <h1 class="text-xl font-black tracking-tighter uppercase whitespace-nowrap font-display">NOVA<span class="text-indigo-600">GAMES</span></h1>
+        <h1 class="text-xl font-black tracking-tighter uppercase whitespace-nowrap font-display">MRWEBS<span class="text-indigo-600">GAMES</span></h1>
       </div>
       
       <div class="flex-1 max-w-md px-4 sm:px-8">
@@ -60,10 +94,10 @@ function renderApp() {
     </header>
 
     <main class="flex-1">
-      ${searchQuery ? renderSearchMode(filteredGames) : renderBentoMode(featuredGame, trendingGames)}
+      ${!hasGames && !searchQuery ? renderEmptyState() : (searchQuery ? renderSearchMode(filteredGames) : renderBentoMode(featuredGame, trendingGames))}
     </main>
 
-    ${!searchQuery ? `
+    ${hasGames && !searchQuery ? `
       <section class="mt-8 pb-12">
         <div class="flex items-center justify-between mb-8">
           <h2 class="text-xl font-black uppercase flex items-center gap-3 font-display">
@@ -99,6 +133,15 @@ function renderApp() {
     document.getElementById('search-input').value = '';
     document.getElementById('search-input').value = val;
   });
+
+  const cloakBtn = document.getElementById('cloak-btn');
+  if (cloakBtn) {
+    cloakBtn.addEventListener('click', () => {
+      isCloaked = !isCloaked;
+      localStorage.setItem('isCloaked', isCloaked);
+      updateCloak();
+    });
+  }
 
   document.querySelectorAll('[data-game-id]').forEach(el => {
     el.addEventListener('click', () => {
@@ -245,6 +288,16 @@ function renderGameCard(game, idx) {
   `;
 }
 
+function renderEmptyState() {
+  return `
+    <div class="flex flex-col items-center justify-center py-32 bento-card-base bg-slate-900/20 text-center px-6">
+      <i data-lucide="box" class="w-16 h-16 text-slate-800 mb-6"></i>
+      <h2 class="text-3xl font-black uppercase font-display mb-2">Vault is Empty</h2>
+      <p class="text-slate-500 max-w-sm">No games are currently indexed in the Nova database. Add game entries to the central repository to populate this vault.</p>
+    </div>
+  `;
+}
+
 function openGame(game) {
   modalTitle.textContent = game.title;
   modalIcon.innerHTML = `<img src="${game.thumbnail}" class="w-full h-full object-cover">`;
@@ -268,6 +321,22 @@ function closeGame() {
 
 closeModalBtn.addEventListener('click', closeGame);
 document.getElementById('modal-backdrop').addEventListener('click', closeGame);
+
+// Cloak Overlay Listener
+document.getElementById('cloak-overlay').addEventListener('click', () => {
+  isCloaked = false;
+  localStorage.setItem('isCloaked', false);
+  updateCloak();
+});
+
+// Keyboard Shortcut (Alt + C)
+window.addEventListener('keydown', (e) => {
+  if (e.altKey && e.key.toLowerCase() === 'c') {
+    isCloaked = !isCloaked;
+    localStorage.setItem('isCloaked', isCloaked);
+    updateCloak();
+  }
+});
 
 // Initializer
 init();
