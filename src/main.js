@@ -1,6 +1,4 @@
 
-import allGamesData from './games.json';
-
 const appContainer = document.getElementById('app');
 const modal = document.getElementById('game-modal');
 const modalContent = document.getElementById('modal-content');
@@ -9,7 +7,7 @@ const modalTitle = document.getElementById('modal-game-title');
 const modalIcon = document.getElementById('modal-game-icon');
 const closeModalBtn = document.getElementById('close-modal');
 
-let allGames = allGamesData;
+let allGames = [];
 let searchQuery = '';
 let isCloaked = localStorage.getItem('isCloaked') === 'true';
 
@@ -44,7 +42,16 @@ function setFavicon(url) {
 // Load Games Data
 async function init() {
   updateCloak();
-  renderApp();
+  try {
+    // We use a timestamp as a cache buster to ensure the latest games are always loaded
+    const timestamp = new Date().getTime();
+    const response = await fetch(`./src/games.json?v=${timestamp}`);
+    allGames = await response.json();
+    renderApp();
+  } catch (err) {
+    console.error('Failed to load games:', err);
+    // Fallback or error UI could go here
+  }
 }
 
 function renderApp() {
@@ -297,7 +304,13 @@ function renderEmptyState() {
 function openGame(game) {
   modalTitle.textContent = game.title;
   modalIcon.innerHTML = `<img src="${game.thumbnail}" class="w-full h-full object-cover">`;
+  
+  // Set source
   modalIframe.src = game.iframeUrl;
+  
+  // Apply requested permissions and sandbox for maximum compatibility
+  modalIframe.setAttribute('allow', 'fullscreen; autoplay; pointer-lock');
+  modalIframe.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-pointer-lock allow-orientation-lock');
   
   modal.classList.remove('hidden');
   setTimeout(() => {
