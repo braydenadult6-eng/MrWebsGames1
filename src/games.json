@@ -1,0 +1,37 @@
+[
+  {
+    "id": "2048",
+    "title": "2048",
+    "description": "Join the numbers and get to the 2048 tile!",
+    "iframeUrl": "https://play2048.co/",
+    "thumbnail": "https://images.unsplash.com/photo-1614332287897-cdc485fa562d?q=80&w=1470&auto=format&fit=crop"
+  },
+  {
+    "id": "tetris",
+    "title": "Tetris",
+    "description": "The classic block-stacking puzzle game.",
+    "iframeUrl": "https://tetris.com/play-tetris",
+    "thumbnail": "https://images.unsplash.com/photo-1574672280600-4accfa5b6f98?q=80&w=1470&auto=format&fit=crop"
+  },
+  {
+    "id": "snake",
+    "title": "Snake",
+    "description": "A classic arcade game where you grow longer by eating.",
+    "iframeUrl": "https://www.google.com/logos/2010/pacman10-i.html",
+    "thumbnail": "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=1470&auto=format&fit=crop"
+  },
+  {
+    "id": "tunnel-rush",
+    "title": "Tunnel Rush",
+    "description": "Fast-paced racing through colorful tunnels.",
+    "iframeUrl": "https://yandex.com/games/app/99166",
+    "thumbnail": "https://images.unsplash.com/photo-1550745165-9bc0b252723f?q=80&w=1470&auto=format&fit=crop"
+  },
+  {
+    "id": "crossy-road",
+    "title": "Crossy Road",
+    "description": "Why did the chicken cross the road? Just to get to the other side!",
+    "iframeUrl": "https://yandex.com/games/app/161474",
+    "thumbnail": "https://images.unsplash.com/photo-1551103782-8ab07afd45c1?q=80&w=1470&auto=format&fit=crop"
+  }
+]
