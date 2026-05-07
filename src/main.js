@@ -1,4 +1,6 @@
 
+import allGamesData from './games.json';
+
 const appContainer = document.getElementById('app');
 const modal = document.getElementById('game-modal');
 const modalContent = document.getElementById('modal-content');
@@ -7,7 +9,7 @@ const modalTitle = document.getElementById('modal-game-title');
 const modalIcon = document.getElementById('modal-game-icon');
 const closeModalBtn = document.getElementById('close-modal');
 
-let allGames = [];
+let allGames = allGamesData;
 let searchQuery = '';
 let isCloaked = localStorage.getItem('isCloaked') === 'true';
 
@@ -42,13 +44,7 @@ function setFavicon(url) {
 // Load Games Data
 async function init() {
   updateCloak();
-  try {
-    const response = await fetch('./src/games.json');
-    allGames = await response.json();
-    renderApp();
-  } catch (err) {
-    console.error('Failed to load games:', err);
-  }
+  renderApp();
 }
 
 function renderApp() {
